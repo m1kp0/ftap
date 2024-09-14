@@ -7,7 +7,7 @@ w:Button("розовый дом", function()
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-491, -7, -166)
 end)
 
-w:Button("рзеленый дом", function()
+w:Button("зеленый дом", function()
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-535, -7, 93)
 end)
 
