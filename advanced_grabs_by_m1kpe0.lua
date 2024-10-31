@@ -19,9 +19,9 @@ Window:Toggle("Heaven grab", true, function(Value)
                     if child and child.Name == "GrabParts" then
                         local grabPart = child:FindFirstChild("GrabPart")
                         local grabbedPart = grabPart:FindFirstChild("WeldConstraint").Part1
-                        local trgtCHR = grabbedPart.Parent
-                        local target = trgtCHR.Torso
-                        if trgtCHR then
+                        local targetChar = grabbedPart.Parent
+                        local target = targetChar.Torso
+                        if targetChar then
                             local velocity = target:FindFirstChild("heavenG") or Instance.new("BodyVelocity")
                             velocity.Name = "heavenG"
                             velocity.Parent = target
@@ -34,7 +34,7 @@ Window:Toggle("Heaven grab", true, function(Value)
                 wait()
             end
         end)
-        coroutine.resume(heavenGrabCoroutine)
+        coroutine.resume(heavenGrabCor)
     else
         if heavenGrabCor then
             coroutine.close(heavenGrabCor)
@@ -43,7 +43,7 @@ Window:Toggle("Heaven grab", true, function(Value)
                 local a = v.Torso
                 if a then
                     for _, i in pairs(a:GetChildren()) do
-                        if i.Name == "heavenG" and i:IsA("BodyVelocity") then i:Destroy() end
+                        if i.Name == "heavenG" and i:IsA("BodyVelocuty") then i:Destroy() end
                     end
                 end
             end
@@ -60,20 +60,20 @@ Window:Toggle("Crazy grab", true, function(Value)
                     if child and child.Name == "GrabParts" then
                         local grabPart = child:FindFirstChild("GrabPart")
                         local grabbedPart = grabPart:FindFirstChild("WeldConstraint").Part1
-                        local trgtChar = grabbedPart.Parent
-                        local target = trgtChar.Torso
-                        if trgtCHR then
-                            trgtCHR.HumanoidRootPart.CFrame = CFrame.new(-17, 421, 50)
+                        local targetChar = grabbedPart.Parent
+                        local target = targetChar.Torso
+                        if targetChar then
+                            targetChar.HumanoidRootPart.CFrame = CFrame.new(-17, 421, 50)
                             wait(crazyGrabDelay)
-                            trgtCHR.HumanoidRootPart.CFrame = CFrame.new(145, 397, -126)
+                            targetChar.HumanoidRootPart.CFrame = CFrame.new(145, 397, -126)
                             wait(crazyGrabDelay)
-                            trgtCHR.HumanoidRootPart.CFrame = CFrame.new(157, 254, 89)
+                            targetChar.HumanoidRootPart.CFrame = CFrame.new(157, 254, 89)
                             wait(crazyGrabDelay)
-                            trgtCHR.HumanoidRootPart.CFrame = CFrame.new(-26, 207, -26)
+                            targetChar.HumanoidRootPart.CFrame = CFrame.new(-26, 207, -26)
                             wait(crazyGrabDelay)
-                            trgtCHR.HumanoidRootPart.CFrame = CFrame.new(-23, 456, -19)
+                            targetChar.HumanoidRootPart.CFrame = CFrame.new(-23, 456, -19)
                             wait(crazyGrabDelay)
-                            trgtCHR.HumanoidRootPart.CFrame = CFrame.new(15, 211, 45)
+                            targetChar.HumanoidRootPart.CFrame = CFrame.new(15, 211, 45)
                             wait(crazyGrabDelay)
                         end
                     end
@@ -89,4 +89,3 @@ Window:Toggle("Crazy grab", true, function(Value)
         end
     end
 end)
-
