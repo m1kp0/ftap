@@ -39,7 +39,7 @@ Window:Toggle("Heaven grab", true, function(Value)
         if heavenGrabCor then
             coroutine.close(heavenGrabCor)
             heavenGrabCor = nil
-            for _, v in pairs(Players:GetPlayers()) do
+            for _, v in ipairs(Players:GetPlayers()) do
                 local a = v.Torso
                 if a then
                     for _, i in pairs(a:GetChildren()) do
