@@ -1,6 +1,6 @@
 --lib
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
-local Window = library:Window("Advanced grabs by m1kpe0")
+local Window = library:Window("Advanced grabs by e")
 
 --coroutines
 local heavenGrabCor
