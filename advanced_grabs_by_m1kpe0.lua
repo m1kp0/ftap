@@ -1,11 +1,3 @@
---[[
-ОЛИВЕР АЙКУ ЕБЛАН
-ОЛИВЕР АЙКУ ЕБЛАН
-ОЛИВЕР АЙКУ ЕБЛАН
-ОЛИВЕР АЙКУ ЕБЛАН
-ОЛИВЕР АЙКУ ЕБЛАН
-]]
-
 --lib
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
 local Window = library:Window("Advanced grabs by e")
