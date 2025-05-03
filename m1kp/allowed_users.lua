@@ -3,3 +3,4 @@ local IDs = {
      3955391535, -- abororoumn (alt acc)
      5634983546 -- lybly_cocatb6969 (alt acc)
 }
+return IDs
