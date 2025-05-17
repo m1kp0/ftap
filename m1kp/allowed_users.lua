@@ -7,5 +7,4 @@ local IDs = {
      1055590743,
      3290460837,
      1465303317
-}
-return IDs
+}; return IDs
