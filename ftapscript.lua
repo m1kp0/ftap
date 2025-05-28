@@ -3,7 +3,7 @@
 
 getgenv().gethui = function() return game.CoreGui end
 
-
+-- убрал проверку на людей с никами, не хочу чтоб кто то знал о них..
 local HubName = "m1kp"
 local hui = false
 local UserInputService = game:GetService("UserInputService")
