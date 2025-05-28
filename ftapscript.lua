@@ -1134,29 +1134,6 @@ Callback = function(Value)
 end
 })
 
-Tab:AddButton({
-Name = "Super anti grab (needs ragdoll and blob)",
-Callback = function()
-    for _, v in pairs(workspace:GetDescendants()) do
-	if v.Name == "CreatureBlobman" then
-	    local args = {
-		[1] = v.RightDetector,
-		[2] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-		[3] = v.RightDetector.RightWeld
-	    }
-    
-	    v.BlobmanSeatAndOwnerScript.CreatureGrab:FireServer(unpack(args))
-	    local args = {
-		[1] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-		[2] = CFrame.new(v.RightDetector.Position) * CFrame.Angles(-0, 0, -0)
-	    }
-    
-	    SetNetworkOwner:FireServer(unpack(args))     
-	end
-    end
-end    
-})
-
 Tab:AddToggle({
 Name = "Anti banana ragdoll",
 Default = false,
@@ -1267,77 +1244,6 @@ end
 })
 
 Tab:AddToggle({
-Name = "Anti bring",
-Default = false,
-Color = Color3.fromRGB(102, 0, 102),
-Callback = function(Value)
-    local a = game.Players.LocalPlayer.Name.."SpawnedInToys"
-    hui = Value
-    if hui == true then
-	for _, v in pairs(workspace:GetDescendants()) do
-	    if v.Name == "LeftWeld" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    elseif v.Name == "LeftAlignOrientation" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    elseif v.Name == "RightWeld" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    elseif v.Name == "RightAlignOrientation" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    end
-	end
-	workspace.DescendantAdded:Connect(function(v)
-	    if v.Name == "LeftWeld" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    elseif v.Name == "LeftAlignOrientation" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    elseif v.Name == "RightWeld" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    elseif v.Name == "RightAlignOrientation" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = false
-		end
-	    end
-	end)
-    end
-    if hui == false then
-	for _, v in pairs(workspace:GetDescendants()) do
-	    if v.Name == "LeftWeld" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = true
-		end
-	    elseif v.Name == "LeftAlignOrientation" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = true
-		end
-	    elseif v.Name == "RightWeld" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = true
-		end
-	    elseif v.Name == "RightAlignOrientation" then
-		if v.Parent.Parent.Parent ~= workspace:FindFirstChild(a) then
-		    v.Enabled = true
-		end
-	    end
-	end
-    end
-end
-})
-
-Tab:AddToggle({
 Name = "Anti void",
 Default = false,
 Color = Color3.fromRGB(102, 0, 102),
@@ -1377,7 +1283,7 @@ Callback = function(Value)
 end    
 })
 
-Tab:AddParagraph("Note","Super anti-grab do BIG ping (for all), reset and turn off 'Ragdoll' and server will got small ping")
+Tab:AddParagraph("Note","тут был гучи антиграб, вы не успели..")
 
 local Section = Tab:AddSection({Name = "Rinnegan"})
 
