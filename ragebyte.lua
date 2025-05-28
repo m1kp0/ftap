@@ -1,4 +1,4 @@
-
+--- омогод опенсурс чиво что афигеть! он старый и больше половины функций в нем не работают.
 
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
