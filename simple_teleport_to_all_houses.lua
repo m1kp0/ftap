@@ -1,16 +1,16 @@
--- slide tp toggle
+-- slide teleport toggle
 local slide_tp_en
 
 -- teleport function
 local function tp(pos)
    local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart; if hrp then
       if not slide_tp_en then
-           hrp.CFrame = pos
-       else
-           local info = TweenInfo.new(0.15, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0)
-           local cf = {["CFrame"] = pos}
-           game:GetService("TweenService"):Create(hrp, info, cf):Play()
-       end
+         hrp.CFrame = pos
+      else
+         local info = TweenInfo.new(0.15, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0)
+         local cf = {["CFrame"] = pos}
+         game:GetService("TweenService"):Create(hrp, info, cf):Play()
+      end
    end
 end
 
