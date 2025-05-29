@@ -15,10 +15,10 @@ local function tp(pos)
 end
 
 -- library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
+local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
 
 -- window
-local w = Library:Window("teleport")
+local w = l:Window("teleport")
 
 -- teleport buttons
 w:Button("pink house", function() tp(CFrame.new(-491, -7, -166)) end)
