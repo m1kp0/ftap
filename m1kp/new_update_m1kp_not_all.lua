@@ -1,3 +1,3 @@
 -- m1kp hub: rewrite to Maclib (https://github.com/biggaboy212/Maclib).
 -- 26.6% done.
--- ало кто такой HiyoNishaya_FIT
+-- тут потом скрипт будет
