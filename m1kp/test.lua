@@ -19,3 +19,5 @@ function Module:CheckOwner(self, UserId: number)
 
    return false
 end   
+
+return Module
