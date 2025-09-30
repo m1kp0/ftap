@@ -15,7 +15,7 @@ local function tp(pos)
 end
 
 -- library
-local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
+local l = loadstring(isfile("m1kp/cache/lime_ui_lib.lua") and readfile("m1kp/cache/lime_ui_lib.lua") or game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
 
 -- window
 local w = l:Window("teleport")
