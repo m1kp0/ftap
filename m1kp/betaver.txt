@@ -1,1 +1,1 @@
-return "1231232 beta"
+return "авав123133 beta"
