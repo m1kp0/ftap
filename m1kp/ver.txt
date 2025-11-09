@@ -1,1 +1,1 @@
-return "2.32.0 stable"
+return "2.32.1"
