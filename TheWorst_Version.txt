@@ -1,1 +1,1 @@
-return "2.37.3"
+return "2.37.3:skull:"
